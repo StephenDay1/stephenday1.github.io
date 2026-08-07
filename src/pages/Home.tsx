@@ -55,6 +55,15 @@ const projectsData = [
     linkText: 'Visit Website',
   },
   {
+    name: 'Trash Panda Hauling and Demo',
+    description:
+      'A simple website for Trash Panda Hauling and Demo use advertising and scheduling services.',
+    image: './trash-panda-logo.png',
+    imageClass: 'w-12 h-12 my-2',
+    link: 'https://trash-panda-hauling-and-demo.web.app/',
+    linkText: 'Visit Website',
+  },
+  {
     name: 'TeachIdaho Econ Summit App',
     description:
       'A web app used by students participating in the Teach Idaho Econ Summit to trade goods and services with other students and learn more about economics principles.',
