@@ -71,10 +71,9 @@ export default function RateThisProfessor() {
 
           <div className="mt-auto flex flex-col gap-4 md:flex-row">
             {universities.map((university) => (
-              <button
-                type="button"
+              <a
+                href={university.url}
                 key={university.name}
-                onClick={() => window.open(university.url, '_blank')}
                 className="flex w-full cursor-pointer items-center justify-center rounded-xl bg-white px-4 py-2"
               >
                 <img
@@ -82,7 +81,7 @@ export default function RateThisProfessor() {
                   alt={`Rate This ${university.name} Professor`}
                   className="transition-all duration-300 hover:scale-110"
                 />
-              </button>
+              </a>
             ))}
           </div>
         </div>
