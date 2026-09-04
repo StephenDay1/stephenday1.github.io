@@ -5,6 +5,8 @@ const universities = [
     name: 'BYU',
     icon: '/rtup/BYU.svg',
     url: 'https://chromewebstore.google.com/detail/bdhjildnnfjkjlejbbjonkkegojchgha?utm_source=github-page',
+    firefoxUrl:
+      'https://addons.mozilla.org/en-US/firefox/addon/rate-this-byu-professor/',
   },
   {
     name: 'UVU',
@@ -15,6 +17,16 @@ const universities = [
 
 export default function RateThisProfessor() {
   const [showOverlay, setShowOverlay] = useState(false)
+  const isFirefox = /firefox/i.test(navigator.userAgent)
+
+  const installLinks = isFirefox
+    ? universities
+        .filter((university) => university.firefoxUrl)
+        .map((university) => ({
+          ...university,
+          url: university.firefoxUrl!,
+        }))
+    : universities
 
   useEffect(() => {
     const icon = document.querySelector<HTMLLinkElement>("link[rel='icon']")
@@ -70,7 +82,7 @@ export default function RateThisProfessor() {
           </h3>
 
           <div className="mt-auto flex flex-col gap-4 md:flex-row">
-            {universities.map((university) => (
+            {installLinks.map((university) => (
               <a
                 href={university.url}
                 key={university.name}
