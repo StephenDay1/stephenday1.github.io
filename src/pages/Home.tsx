@@ -60,7 +60,7 @@ const projectsData = [
       'A simple website for Trash Panda Hauling and Demo use advertising and scheduling services.',
     image: './trash-panda-logo.png',
     imageClass: 'w-12 h-12 my-2',
-    link: 'https://trash-panda-hauling-and-demo.web.app/',
+    link: 'https://trashpandahaulingdemo.com/',
     linkText: 'Visit Website',
   },
   {
