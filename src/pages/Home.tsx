@@ -51,7 +51,7 @@ const projectsData = [
     image: './lensflareicon.svg',
     imageClass:
       'w-16 h-16 pb-2 px-1 object-left object-contain scale rounded-2xl',
-    link: 'https://lensflaregalleries.web.app/',
+    link: 'https://lensflaregalleries.com',
     linkText: 'Visit Website',
   },
   {
